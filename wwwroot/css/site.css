@@ -1,0 +1,64 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#left {
+    width: 15%;
+    height: 100%;
+    background-color: #F6F6F6;
+    float: left;
+}
+
+#right {
+    width: 85%;
+    height: 100%;
+    background-color: #eeeeee;
+    float: left;
+}
+
+#gameiframe {
+    width: 100%;
+    height: 100%; 
+    border-left: 1px solid black;
+}
+
+#startGameButtonDiv{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startGameButton{
+    width: 50%;
+    font-size: 25px;
+}
+
+.lPanelArticleTitle{
+    margin: 5%;
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman';
+    font-weight: bold; 
+}
+
+#lPanelStartArticle {
+    border-bottom: 1px solid gray;
+}
+
+#lPanelTargetArticle {
+    border-top: 1px solid gray;
+}
+
+#stopwatch{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: right;
+    font-family: 'Roboto';
+    color: green;
+    margin: 5%;
+}
+
+#yourGamePath {
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman';
+    margin: 5%;
+}

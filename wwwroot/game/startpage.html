@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/stylegamestart.css" />
+    <title>Game Start</title>
+</head>
+<body>
+    <div id="gameCreation">
+        <form>
+            <label><input type="radio" name="language" value="en" checked> English</label>
+            <label><input type="radio" name="language" value="pl"> Polski</label>
+        </form>
+        <button id="createGameButton" onclick="getGameItem()">CREATE</button>
+    </div>
+
+    <div id="gameLoading">
+        <img id="gameLoadingGif" src="../img/loading.gif" alt="loading"/>
+    </div>
+
+    <div id="gameSummary">
+        <div class="startTarget" id="startarticle">
+            <div class="startTargetDiv">Start:</div>
+            <div class="block">
+                <div class="articleTitle"></div>
+                <div class="articleSummary"></div>
+            </div>
+            <img src="" class="articlePicture" id="startPicture" alt="article picture" width="200" height="200">
+        </div>
+        <div class="startTarget" id="targetarticle">
+            <div class="startTargetDiv">Target:</div>
+            <div class="block">
+                <div class="articleTitle"></div>
+                <div class="articleSummary"></div>
+            </div>
+            <img src="" class="articlePicture" id="targetPicture" alt="article picture" width="200" height="200">
+        </div>
+
+    </div>
+    <script src="../js/gamestart.js" asp-append-version="true"></script>
+</body>
+</html>

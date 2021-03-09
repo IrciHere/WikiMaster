@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/site.css"/>
+    <title>Wiki Master</title>
+</head>
+
+
+
+<body>
+    <script src="js/script.js"></script>
+
+    <div id="left">
+        <div id="startGameButtonDiv"><button id="startGameButton" onclick="startGame()" disabled>START</button></div>
+        <div id="stopwatch"></div>
+        <div id="lPanelStartArticle" class="lPanelArticleTitle"></div>
+        <div id="yourGamePath"></div>
+        <div id="lPanelTargetArticle" class="lPanelArticleTitle"></div>
+    </div>
+
+    <div id="right">
+        <iframe id="gameiframe" src="game/startpage.html" width="100%" height="100%" scrolling="yes">Iframes not supported</iframe>
+    </div>
+
+    <script>checkIfChallengeLink();</script>
+</body>
+
+
+</html>

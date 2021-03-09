@@ -1,0 +1,46 @@
+﻿.startTarget {
+    margin: 5%;
+    font-size: 50px;
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman';
+}
+
+.startTargetDiv {
+    border-bottom: 2px solid #a7d7f9;
+    margin-bottom: 5px;
+    height: 65px;
+    width: 160px;
+}
+
+.articleTitle {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman';
+}
+
+.articleSummary {
+    font-size: 25px;
+}
+
+.block {
+    display: inline-block;
+}
+
+.articlePicture {
+    display: inline-block;
+}
+
+#gameSummary{
+    display: none;
+}
+
+#gameLoading{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#gameLoadingGif {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
