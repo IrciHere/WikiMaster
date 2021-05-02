@@ -18,21 +18,10 @@ function startGame() {
     document.getElementById("startGameButton").disabled = true;
 }
 
-function linkClicked(link) {
-    if (link == "/game/startpage.html" || link == "srcdoc" || link[0] == '#') return;
-    window.frames[0].stop();
-    getHtml(link);
-    var addToPath = decodeURI(link).replaceAll("_", " ").replace("/api/wiki/", "> ").replace(language, "").replace("/wiki%2F", "") + "\n";
-    document.getElementById("yourGamePath").innerText += addToPath;
-    var linkToCheck = "/api/wiki/" + language + gameData.targetArticle.articleUrl.replace("wiki/", "wiki%2F");
-    if (link == linkToCheck) {       
-        stopStopwatch();
-    }
-}
-
 
 function getHtml(urlBody) {
     var page = urlBody.replace("wiki/", "wiki%2F").replace("api/wiki%2F", "api/wiki/");
+
     fetch(page)
         .then(response => response.text())
         .then((response) => loadPage(response))
@@ -44,10 +33,12 @@ function loadPage(data) {
     document.getElementById("gameiframe").srcdoc = data;
 }
 
+
 function startStopwatch() {
     startTime = new Date().getTime();
     tInterval = setInterval(getShowTime, 1);
 }
+
 
 function getShowTime() {
     updatedTime = new Date().getTime();
@@ -64,16 +55,20 @@ function getShowTime() {
     document.getElementById("stopwatch").innerText = textTime;
 }
 
+
 function stopStopwatch() {
     clearInterval(tInterval);
 }
 
-function checkIfChallengeLink() {
-    var urlHere = window.location.href;
-    var checkedUrl = new URL(urlHere);
-    var param = checkedUrl.searchParams.get("challenge");
 
-    if (!param) return;
-
-
+function linkClicked(link) {
+    if (link == "/game/startpage.html" || link == "srcdoc" || link[0] == '#') return;
+    window.frames[0].stop();
+    getHtml(link);
+    var addToPath = decodeURI(link).replaceAll("_", " ").replace("/api/wiki/", "> ").replace(language, "").replace("/wiki%2F", "") + "\n";
+    document.getElementById("yourGamePath").innerText += addToPath;
+    var linkToCheck = "/api/wiki/" + language + gameData.targetArticle.articleUrl.replace("wiki/", "wiki%2F");
+    if (link == linkToCheck) {
+        stopStopwatch();
+    }
 }

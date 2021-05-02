@@ -1,6 +1,4 @@
-﻿using WikiMaster.ExternalAPIs.Wikipedia;
-
-namespace WikiMaster.Models
+﻿namespace WikiMaster.Models
 {
     public class ArticleItem
     {
@@ -13,7 +11,16 @@ namespace WikiMaster.Models
         {
             ArticleTitle = article.title;
             ArticleUrl = CutUrlBody(article.content_urls.desktop.page);
-            ArticleThumbnailUrl = article.thumbnail.source;
+
+            try
+            {
+                ArticleThumbnailUrl = article.thumbnail.source;
+            }
+            catch (System.NullReferenceException)
+            {
+                ArticleThumbnailUrl = "";
+            }
+
             ArticleSummary = article.description;
         }
 

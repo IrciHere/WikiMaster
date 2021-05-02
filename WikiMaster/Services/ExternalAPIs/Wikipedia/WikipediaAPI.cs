@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WikiMaster.ExternalAPIs.Wikipedia
+namespace WikiMaster.Services.ExternalAPIs.Wikipedia
 {
     public class WikipediaAPI
     {

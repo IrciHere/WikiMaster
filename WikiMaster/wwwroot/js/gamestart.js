@@ -2,6 +2,7 @@
 var gameData;
 var language;
 
+
 function getGameItem() {
     language = document.querySelector('input[name="language"]:checked').value;
     uri += language;
@@ -12,6 +13,7 @@ function getGameItem() {
         .then(data => showGameItem(data))
         .catch(error => console.error('Unable to get items.', error));
 }
+
 
 function showGameItem(data) {
     var startData = data.startArticle;
@@ -26,21 +28,8 @@ function showGameItem(data) {
     document.getElementById("targetPicture").src = targetData.articleThumbnailUrl;
 
     gameData = data;
-    console.log(gameData);
-
-    //generateChallengeLink(gameData);
 
     document.getElementById("gameLoading").style.display = "none";
     document.getElementById("gameSummary").style.display = "inline";
     parent.document.getElementById("startGameButton").disabled = false;
-}
-
-
-function generateChallengeLink(jsonData) {
-    var strJson = JSON.stringify(jsonData);
-    console.log(strJson);
-    var strData = btoa(strJson);
-    console.log(strData);
-    var link = "localhost:44304/?challenge=" + strData;
-    document.getElementById("challengeLinkBox").value = link;
 }

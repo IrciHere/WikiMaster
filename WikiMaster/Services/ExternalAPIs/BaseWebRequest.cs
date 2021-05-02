@@ -2,7 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 
-namespace WikiMaster.ExternalAPIs
+namespace WikiMaster.Services.ExternalAPIs.Wikipedia
 {
     class BaseWebRequest
     {

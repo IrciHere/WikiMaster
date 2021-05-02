@@ -1,7 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System.Threading.Tasks;
 
-namespace WikiMaster.WebsiteScrapper
+namespace WikiMaster.Services.WebsiteScrapper
 {
     public class BaseScrapper
     {

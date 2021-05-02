@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Newtonsoft.Json;
+using WikiMaster.Models;
 
-namespace WikiMaster.ExternalAPIs.Wikipedia
+namespace WikiMaster.Services.ExternalAPIs.Wikipedia
 {
     public class WikipediaData
     {

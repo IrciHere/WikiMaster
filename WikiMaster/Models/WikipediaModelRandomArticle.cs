@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WikiMaster.ExternalAPIs.Wikipedia
+namespace WikiMaster.Models
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
     public class Namespace
@@ -81,6 +81,4 @@ namespace WikiMaster.ExternalAPIs.Wikipedia
         public string extract { get; set; }
         public string extract_html { get; set; }
     }
-
-
 }
