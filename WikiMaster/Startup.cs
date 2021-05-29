@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using WikiMaster.Middleware;
 
 namespace WikiMaster
 {
@@ -36,6 +37,8 @@ namespace WikiMaster
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WikiMaster v1"));
             }
+
+            app.UseMiddleware<LoggingMiddleware>();
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
